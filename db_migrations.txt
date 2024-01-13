@@ -1,0 +1,5 @@
+after adding the `migrate = Migrate(app, db)` line to the init file run:
+
+`flask --app gymapp db init`
+`flask --app gymapp db migrate` or `flask --app gymapp db migrate -m "message"`
+`flask --app gymapp db upgrade`
