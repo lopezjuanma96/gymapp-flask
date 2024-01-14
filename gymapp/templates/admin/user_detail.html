@@ -1,0 +1,15 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/user_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Detail</title>
+</head>
+<body>
+    <h1>User Detail</h1>
+    <form>
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ user.name }}" readonly>
+    </form>
+</body>
+</html>

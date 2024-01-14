@@ -18,3 +18,6 @@ class Machine(db.Model):
 
     def check(self, check_id):
         return self.id == check_id
+
+    def update(self):
+        db.session.commit()

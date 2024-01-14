@@ -1,0 +1,17 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/new_machine.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Machine</title>
+</head>
+<body>
+    <h1>Create New Machine</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label }}<br>{{ form.name() }}</p>
+        <p>{{ form.description.label }}<br>{{ form.description() }}</p>
+        <p>{{ form.image.label }}<br>{{ form.image() }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>

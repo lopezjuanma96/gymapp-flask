@@ -9,7 +9,8 @@ def create_app(config_class=DevelopmentConfig):
     app.config.from_object(config_class)
 
     # import and register blueprints
-    from .views import home, login, register
+    from .views import admin, home, login, register
+    app.register_blueprint(admin.bp)
     app.register_blueprint(home.bp)
     app.register_blueprint(login.bp)
     app.register_blueprint(register.bp)

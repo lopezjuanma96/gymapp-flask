@@ -1,0 +1,19 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/machine_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Detail</title>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <h1>Machine Detail</h1>
+    <div>
+        <input type="hidden" id="machine_id" value="{{ machine.id }}">
+        <h2>{{ machine.name }}</h2>
+        <p>{{ machine.description }}</p>
+        <img src="{{ machine.image }}" alt="{{ machine.name }}">
+    </div>
+</body>
+</html>

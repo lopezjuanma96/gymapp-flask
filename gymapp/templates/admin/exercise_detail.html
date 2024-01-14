@@ -1,0 +1,37 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/exercise_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise Detail</title>
+</head>
+<body>
+    <h1>Exercise Detail</h1>
+    <form>
+        <!-- BEGIN: Hidden ID Field -->
+        <input type="hidden" name="exercise_id" value="{{ exercise.id }}">
+        <!-- END: Hidden ID Field -->
+
+        <div>
+            <label for="exercise_name">Name:</label>
+            <input type="text" id="exercise_name" name="exercise_name" value="{{ exercise.name }}" readonly>
+        </div>
+
+        <div>
+            <label for="exercise_description">Description:</label>
+            <textarea id="exercise_description" name="exercise_description" readonly>{{ exercise.description }}</textarea>
+        </div>
+
+        <div>
+            <label for="exercise_video">Video URL:</label>
+            <a href="{{ exercise.video_url }}">{{ exercise.video_url }}</a>
+        </div>
+
+        <div>
+            <label for="machine_detail">Linked Machine:</label>
+            <a href="/admin/machine/{{ exercise.machine_id }}">{{ exercise.machine_id }}</a>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

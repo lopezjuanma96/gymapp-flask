@@ -1,0 +1,19 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/users.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+                <a href="{{ url_for('admin.user', user_id=user.id) }}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

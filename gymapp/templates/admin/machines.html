@@ -1,0 +1,21 @@
+<!-- FILEPATH: /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/machines.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine List</title>
+</head>
+<body>
+    <h1>Machine List</h1>
+    <ul>
+        {% for machine in machines %}
+            <li>
+                <h2>{{ machine.name }}</h2>
+                <p>{{ machine.description }}</p>
+                <img src="{{ machine.image }}" alt="{{ machine.name }} Image">
+                <a href="{{ url_for('admin_machine_detail', machine_id=machine.id) }}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

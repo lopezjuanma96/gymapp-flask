@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Admin Page!</h1>
+    
+    <p>Here you can see the list of users, machines and excercises</p>
+    <p><a href="{{ url_for('admin.users') }}">Users</a></p>
+    <p><a href="{{ url_for('admin.machines') }}">Machines</a></p>
+    <p><a href="{{ url_for('admin.exercises') }}">Excercises</a></p>
+    
+    <p>Here you can create new machines and excercises.</p>
+    <p><a href="{{ url_for('admin.new_machine') }}">Create New Machine</a></p>
+    <p><a href="{{ url_for('admin.new_exercise') }}">Create New Excercise</a></p>
+
+</body>
+</html>

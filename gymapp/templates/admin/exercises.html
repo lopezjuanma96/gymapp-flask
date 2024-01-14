@@ -1,0 +1,36 @@
+<!-- /c:/Users/lopez/Projects/gymapp/gymapp/templates/admin/exercises.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise List</title>
+</head>
+<body>
+    <h1>Exercise List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Video</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exercise in exercises %}
+            <tr>
+                <td>{{ exercise.name }}</td>
+                <td>{{ exercise.description }}</td>
+                <td>
+                    <a href="{{ exercise.video_url }}">Link</a>
+                </td>
+                <td>
+                    <a href="{{ url_for('admin_exercise_detail', exercise_id=exercise.id) }}">Exercise Detail</a>
+                    <a href="{{ url_for('admin_machine_detail', machine_id=exercise.machine_id) }}">Machine Detail</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
